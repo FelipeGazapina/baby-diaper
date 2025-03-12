@@ -1,0 +1,95 @@
+.baby-form-page {
+  padding: 1rem 0;
+}
+
+.baby-form {
+  width: 100%;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.form-input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.gender-options {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.gender-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--light-gray);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  flex: 1;
+  transition: all 0.3s;
+}
+
+.gender-option.selected {
+  border-color: var(--primary-color);
+  background-color: rgba(74, 144, 226, 0.1);
+}
+
+.gender-option input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.gender-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gender-icon.male {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234A90E2'%3E%3Cpath d='M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h-2v2h2v2h2v-2h2v-2h-2z'/%3E%3C/svg%3E");
+}
+
+.gender-icon.female {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23F5A623'%3E%3Cpath d='M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z'/%3E%3C/svg%3E");
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.form-actions button {
+  min-width: 120px;
+}
+
+@media (max-width: 480px) {
+  .gender-options {
+    flex-direction: column;
+  }
+  
+  .gender-option {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0.75rem;
+  }
+  
+  .gender-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+    margin-right: 1rem;
+  }
+} 

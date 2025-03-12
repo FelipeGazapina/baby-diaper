@@ -1,0 +1,41 @@
+{
+    "project": {
+      "name": "Meu Projeto PWA com Strapi e PostgreSQL",
+      "description": "Um Progressive Web App (PWA) que utiliza Strapi como backend, PostgreSQL rodando em Docker e React como frontend."
+    },
+    "rules": [
+      {
+        "pattern": "**/*.md",
+        "description": "Capturar descrições e documentação do projeto para entender os objetivos."
+      },
+      {
+        "pattern": "docker-compose.yml",
+        "description": "Identificar a configuração do Docker Compose, incluindo serviços como PostgreSQL e Strapi."
+      },
+      {
+        "pattern": "backend/**/*.js",
+        "description": "Analisar o código do backend Strapi para entender os modelos, controladores e APIs."
+      },
+      {
+        "pattern": "frontend/src/**/*.tsx",
+        "description": "Capturar a estrutura do frontend React e verificar implementações específicas para PWA."
+      },
+      {
+        "pattern": "frontend/public/service-worker.js",
+        "description": "Verificar a configuração do Service Worker para o PWA."
+      },
+      {
+        "pattern": "**/.env*",
+        "description": "Identificar configurações de ambiente, como credenciais do banco de dados e chaves de API."
+      },
+      {
+        "pattern": "**/package.json",
+        "description": "Capturar dependências e scripts de build/teste para entender o setup do projeto."
+      },
+      {
+        "pattern": "",
+        "description": "Sempre esvreva o codigo em typescript"
+      }
+    ]
+  }
+  

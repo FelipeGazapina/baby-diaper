@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "diaper_usages",
+  "info": {
+    "singularName": "diaper-usage",
+    "pluralName": "diaper-usages",
+    "displayName": "Uso de Fraldas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "quantity": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "RN",
+        "P",
+        "M",
+        "G",
+        "XG",
+        "XXG"
+      ],
+      "required": true
+    },
+    "baby": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::baby.baby",
+      "inversedBy": "diaperUsages"
+    }
+  }
+} 

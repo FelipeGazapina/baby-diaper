@@ -1,0 +1,30 @@
+{
+  "name": "baby-diaper-tracker",
+  "version": "0.1.0",
+  "description": "Aplicativo para rastrear o uso de fraldas e o crescimento do bebê",
+  "main": "dev.js",
+  "scripts": {
+    "dev": "node dev.js",
+    "start:backend": "docker-compose up",
+    "start:frontend": "cd frontend && npm start",
+    "install:backend": "cd backend && npm install",
+    "install:frontend": "cd frontend && npm install",
+    "install:all": "npm install && npm run install:backend && npm run install:frontend",
+    "build:frontend": "cd frontend && npm run build",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "keywords": [
+    "baby",
+    "diaper",
+    "tracker",
+    "strapi",
+    "react",
+    "pwa"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "path": "^0.12.7"
+  }
+} 

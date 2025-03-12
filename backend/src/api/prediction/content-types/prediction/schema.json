@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "predictions",
+  "info": {
+    "singularName": "prediction",
+    "pluralName": "predictions",
+    "displayName": "Previsão"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    },
+    "estimatedQuantity": {
+      "type": "integer",
+      "required": true
+    },
+    "estimatedSize": {
+      "type": "enumeration",
+      "enum": [
+        "RN",
+        "P",
+        "M",
+        "G",
+        "XG",
+        "XXG"
+      ],
+      "required": true
+    },
+    "baby": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::baby.baby",
+      "inversedBy": "predictions"
+    }
+  }
+} 

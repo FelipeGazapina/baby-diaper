@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "babies",
+  "info": {
+    "singularName": "baby",
+    "pluralName": "babies",
+    "displayName": "Bebê"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "birthDate": {
+      "type": "date",
+      "required": true
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "male",
+        "female"
+      ],
+      "required": true
+    },
+    "measurements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::measurement.measurement",
+      "mappedBy": "baby"
+    },
+    "diaperUsages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::diaper-usage.diaper-usage",
+      "mappedBy": "baby"
+    },
+    "predictions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::prediction.prediction",
+      "mappedBy": "baby"
+    }
+  }
+} 

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "measurements",
+  "info": {
+    "singularName": "measurement",
+    "pluralName": "measurements",
+    "displayName": "Medidas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "weight": {
+      "type": "decimal",
+      "required": true
+    },
+    "height": {
+      "type": "decimal",
+      "required": true
+    },
+    "baby": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::baby.baby",
+      "inversedBy": "measurements"
+    }
+  }
+} 
